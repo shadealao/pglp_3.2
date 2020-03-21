@@ -23,6 +23,7 @@ public class App
     	listesalarie.add(v3);
     	listesalarie.add(e1);
     	listesalarie.add(e2);
+    	listesalarie.add(new Manager(20));
     	double salaireTotal = 0;
     	
     	for(int i = 0; i< listesalarie.size(); i++) {
