@@ -7,6 +7,9 @@ public class Manager extends allEmploye{
 		this.NbEmployes = NbEmployes;
 	}
 	
+	/**
+	 * Salaire d'un Manager.
+	 */
 	@Override
 	public double salaire() {
 		return base+this.NbEmployes*100;

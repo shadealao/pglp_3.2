@@ -7,6 +7,9 @@ public class Vendeur extends allEmploye{
 		this.commission = commission;
 	}
 	
+	/**
+	 * Salaire d'un vendeur.
+	 */
 	@Override
 	public double salaire() {
 		return base+commission;

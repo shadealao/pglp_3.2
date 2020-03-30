@@ -8,4 +8,3 @@ public abstract class allEmploye {
 
 
 
-//respecte ocp car si on ajoute une fonctionalité on va étendre rajouter une classe et non en modifier une 

@@ -9,7 +9,9 @@ import java.util.ArrayList;
  */
 public class App 
 {
-    public static void main( String[] args )
+	
+	//respecte ocp car si on ajoute une fonctionalité on va étendre / rajouter une classe et non en modifier une 
+    public static void main( String[] args )throws EstListeVide
     {
     	Vendeur v1 = new Vendeur(10);
     	Vendeur v2 = new Vendeur(20);
@@ -24,12 +26,20 @@ public class App
     	listesalarie.add(e1);
     	listesalarie.add(e2);
     	listesalarie.add(new Manager(20));
+    	
+    	
+    	System.out.println("Salaires total "+ calculSalaire(listesalarie));
+    }
+    
+    public static double calculSalaire(ArrayList<allEmploye>listesalarie) throws EstListeVide {
     	double salaireTotal = 0;
     	
+    	if(listesalarie.isEmpty()) {
+    		throw new EstListeVide();
+    	}
     	for(int i = 0; i< listesalarie.size(); i++) {
     		salaireTotal += listesalarie.get(i).salaire();
     	}
-    	
-    	System.out.println("Salaires total "+salaireTotal);
+    	return salaireTotal;
     }
 }

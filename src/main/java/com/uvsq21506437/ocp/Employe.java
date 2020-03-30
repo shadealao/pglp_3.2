@@ -8,6 +8,9 @@ public class Employe extends allEmploye {
 		this.startYear = startYear;
 	}
 	
+	/**
+	 * salaire d'un employé.
+	 */
 	@Override
 	public double salaire() {
 		return salaire+(2020-this.startYear)*20;
